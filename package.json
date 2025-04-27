@@ -1,0 +1,13 @@
+{
+    "name": "javascript-exercises",
+    "version": "1.0.0",
+    "description": "Projeto modular de funcoes JavaScript para Programacao Web",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {
+      "start": "node src/index.js"
+    },
+    "author": "Seu Nome",
+    "license": "ISC"
+  }
+  
