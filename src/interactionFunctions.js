@@ -37,7 +37,7 @@ export function saudacao(nome) {
           alert(`Você não acertou! O número secreto era ${numeroSecreto}.`);
           const tentarNovamente = confirm('Deseja tentar novamente?');
           if (tentarNovamente) {
-              advinheNumero(); // Chama a função novamente para reiniciar o jogo
+              advinheNumero();
           }
       }
   }
