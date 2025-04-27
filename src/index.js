@@ -7,7 +7,7 @@ import {
   import {
     soma, isPar, media, imc,
     calcularDesconto, calcularImpostoRenda,
-    calcularMediaArredondada, gerarTabuada,
+    calcularMediaArredondada,
     calcularIdade, contarDigitosParesImpares
   } from './mathFunctions.js';
   
@@ -57,8 +57,6 @@ import {
     console.log("Desconto de 1000 com 20%:", calcularDesconto(1000, 20));
     console.log("Imposto de Renda para salário 3000:", calcularImpostoRenda(3000));
     console.log("Média arredondada da lista [5, 10, 15]:", calcularMediaArredondada([5, 10, 15]));
-    console.log("Tabuada do 7:");
-    gerarTabuada(7);
   
     console.log("Idade para ano de nascimento 1990:", calcularIdade(1990));
     console.log("Contagem de dígitos pares e ímpares em 123456:", contarDigitosParesImpares(123456));

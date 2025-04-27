@@ -1,12 +1,3 @@
-export function calcularMediaAlunos(alunos) {
-    const somaNotas = alunos.reduce((acc, aluno) => acc + aluno.nota, 0);
-    return somaNotas / alunos.length;
-}
-
-export function calcularIdade(anoNascimento) {
-    const anoAtual = new Date().getFullYear();
-    return anoAtual - anoNascimento;
-}
 
 export function livrosPorAutor(livros, autor) {
     return livros.filter(livro => livro.autor === autor);
