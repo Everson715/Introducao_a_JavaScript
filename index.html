@@ -1,44 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto JavaScript Modular</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projeto JavaScript Modular</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Exercícios de JavaScript Modular</h1>
-    <p>Abra o console do navegador para ver os resultados!</p>
+  <h1>Projeto JavaScript Modular</h1>
+  <p>Abra o console para ver os testes e interações com o JavaScript!</p>
 
-    <button id="iniciarJogoBtn">Iniciar Jogo de Adivinhação</button>
-    <button id="exibirMensagemBtn">Exibir Mensagem</button>
+  <div class="quadro">
+    <button id="iniciar-jogo">Iniciar Jogo de Adivinhação</button>
+    <button id="exibir-mensagem">Exibir Mensagem</button>
+  </div>
 
-    <script type="module">
-        import * as MathFunctions from './src/mathFunctions.js';
-        import * as ArrayFunctions from './src/arrayFunctions.js';
-        import * as StringFunctions from './src/stringFunctions.js';
-        import * as InteractionFunctions from './src/interactionFunctions.js';
+  <!-- Aqui o container onde o quadro de mensagens vai aparecer -->
+  <div id="mensagens-container" class="quadro"></div>
 
-        // Exemplo de uso das funções
-        console.log("Soma de 3 + 5:", MathFunctions.soma(3, 5));
-        console.log("Média de 7, 8, 9:", MathFunctions.media(7, 8, 9));
-        console.log("String invertida:", StringFunctions.inverterString("Javascript"));
-        console.log("Nome da pessoa mais velha:", ArrayFunctions.pessoaMaisVelha([{nome:'Ana',idade:30},{nome:'Beto',idade:40}]));
-        
-        // Função que inicializa o jogo de adivinhar o número
-        function iniciarJogo() {
-            InteractionFunctions.advinheNumero();
-        }
-
-        // Função para exibir mensagem de saudação
-        function exibirMensagem() {
-            InteractionFunctions.pedirNome();
-        }
-
-        // Espera o carregamento do DOM para adicionar os eventos
-        window.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('iniciarJogoBtn').addEventListener('click', iniciarJogo);
-            document.getElementById('exibirMensagemBtn').addEventListener('click', exibirMensagem);
-        });
-    </script>
+  <script type="module" src="./src/index.js"></script>
 </body>
 </html>
