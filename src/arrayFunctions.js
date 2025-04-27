@@ -3,12 +3,9 @@ export function calcularMediaAlunos(alunos) {
     return somaNotas / alunos.length;
 }
 
-export function verificarPropriedade(objeto, propriedade) {
-    return objeto.hasOwnProperty(propriedade);
-}
-
-export function calcularPrecoProduto(custo, margemLucro, frete) {
-    return custo + (custo * (margemLucro / 100)) + frete;
+export function calcularIdade(anoNascimento) {
+    const anoAtual = new Date().getFullYear();
+    return anoAtual - anoNascimento;
 }
 
 export function livrosPorAutor(livros, autor) {
@@ -21,4 +18,12 @@ export function pessoaMaisVelha(pessoas) {
 
 export function carrosFabricadosDepois(carros, ano) {
     return carros.filter(carro => carro.ano > ano);
+}
+
+export function calcularPrecoProduto(custo, margemLucro, frete) {
+    return custo + (custo * (margemLucro / 100)) + frete;
+}
+
+export function verificarPropriedade(objeto, propriedade) {
+    return objeto.hasOwnProperty(propriedade);
 }

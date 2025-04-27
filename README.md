@@ -68,34 +68,34 @@ Aqui estão alguns exemplos de como as funções podem ser usadas:
 
 ```javascript
 import { soma } from './src/mathFunctions.js';
-console.log(soma(2, 3)); // Resultado: 5
+console.log(soma(2, 3)); 
 
 import { media } from './src/mathFunctions.js';
-console.log(media(10, 20, 30)); // Resultado: 20
+console.log(media(10, 20, 30)); 
 ```
 
 ### Manipulação de Strings
 
 ```javascript
 import { inverterString } from './src/stringFunctions.js';
-console.log(inverterString("hello")); // Resultado: "olleh"
+console.log(inverterString("hello")); 
 
 import { palavrasLongas } from './src/stringFunctions.js';
-console.log(palavrasLongas("Este é um exemplo de uma frase bem longa", 5)); // Resultado: ["exemplo", "frase", "longa"]
+console.log(palavrasLongas("Este é um exemplo de uma frase bem longa", 5)); 
 ```
 
 ### Manipulação de Arrays
 
 ```javascript
 import { pessoaMaisVelha } from './src/arrayFunctions.js';
-console.log(pessoaMaisVelha([{nome: 'Ana', idade: 30}, {nome: 'Carlos', idade: 45}])); // Resultado: "Carlos"
+console.log(pessoaMaisVelha([{nome: 'Ana', idade: 30}, {nome: 'Michael', idade: 45}])); 
 ```
 
 ### Interatividade com o Usuário
 
 ```javascript
 import { advinheNumero } from './src/interactionFunctions.js';
-advinheNumero(); // Inicia o jogo de adivinhar o número no console.
+advinheNumero(); 
 ```
 
 ---

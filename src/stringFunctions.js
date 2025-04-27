@@ -7,10 +7,10 @@ export function encontrarPalavraMaisLonga(str) {
     return maisLonga;
 }
 
-export function filtrarStringsGrandes(array) {
-    return array.filter(str => str.length > 5);
-}
-
 export function inverterString(str) {
     return str.split('').reverse().join('');
+}
+
+export function filtrarStringsGrandes(array) {
+    return array.filter(str => str.length > 5);
 }
