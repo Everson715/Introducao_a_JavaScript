@@ -1,101 +1,105 @@
 # Projeto: Exercícios de JavaScript Modularizados
 
 ## Descrição
-Este repositório contém **21 funções JavaScript** organizadas de forma **modular**, cobrindo quatro categorias principais:
+Este projeto contém **21 funções JavaScript** organizadas de forma **modular**, abrangendo diferentes áreas como **operações matemáticas**, **manipulação de arrays e objetos**, **manipulação de strings** e **interatividade com o usuário**. O objetivo principal é servir como material de aprendizado para quem deseja aprimorar seus conhecimentos em **Programação para Web**.
 
-- **Operações matemáticas**: soma, média, IMC, tabuada, etc.
-- **Manipulação de arrays e objetos**: filtros, cálculos de média, busca de elementos, etc.
-- **Manipulação de strings**: inverter texto, encontrar palavras longas, etc.
-- **Interatividade com o usuário**: jogo de adivinhar número, renderização de mensagens dinâmicas.
-
-O objetivo é servir como um conjunto de exercícios práticos para quem deseja aprimorar habilidades de **programação para web** usando módulos ES6.
-
----
+O projeto pode ser executado tanto em **Node.js** quanto em **navegadores modernos**.
 
 ## Estrutura do Projeto
 
 ```
 /
 ├── src/
-│   ├── mathFunctions.js         # Funções matemáticas (soma, média, IMC...)
-│   ├── arrayFunctions.js        # Funções de array e objeto
-│   ├── stringFunctions.js       # Funções de manipulação de string
-│   ├── interactionFunctions.js  # Jogo e renderização de mensagens
-│   └── index.js                 # Ponto de entrada no navegador (associa botões, testes)
-├── styles.css                   # Estilos para página HTML
-├── index.html                   # Carrega o bundle ES Module no navegador
-└── package.json                 # Configuração para execução via Node.js
+│   ├── mathFunctions.js         # Funções matemáticas (soma, IMC, médias, etc.)
+│   ├── arrayFunctions.js        # Manipulação de arrays (filtragem, médias, etc.)
+│   ├── stringFunctions.js       # Manipulação de strings (inverter, encontrar palavras longas, etc.)
+│   ├── interactionFunctions.js  # Interatividade com o usuário (jogos, mensagens)
+│   └── index.js                 # Arquivo principal, importa e testa as funções
+├── package.json                 # Configuração para execução no Node.js
+└── index.html                   # Arquivo HTML para execução no navegador
 ```
 
----
+### Descrição dos Arquivos:
 
-## Pré-requisitos
-
-- [Node.js](https://nodejs.org/) (versão 14+)
-- Navegador moderno (Chrome, Firefox, Edge) para executar módulos ES6
+- **mathFunctions.js**: Contém funções para operações matemáticas como soma, cálculo de IMC, médias e tabuada.
+- **arrayFunctions.js**: Contém funções para manipulação de arrays e objetos, como cálculo de médias de alunos, filtro de carros, livros, etc.
+- **stringFunctions.js**: Contém funções para manipulação de strings, como inverter palavras, encontrar palavras longas, entre outras.
+- **interactionFunctions.js**: Contém funções para interatividade com o usuário, como o jogo de adivinhar o número e impressão de quadros no console.
+- **index.js**: Arquivo principal onde as funções são importadas e testadas.
+- **index.html**: Arquivo HTML que executa o projeto em um ambiente de navegador.
+- **package.json**: Arquivo de configuração para execução com Node.js, com suporte a módulos.
 
 ---
 
 ## Como Executar
 
-### 1. Localmente via Node.js
+### 1. Via Node.js
 
-1. Clone o repositório:
-   ```bash
-   git clone <URL-do-repo>
-   cd <nome-do-projeto>
-   ```
-2. Instale dependências (não há dependências externas, mas cria o `node_modules`):
-   ```bash
-   npm install
-   ```
-3. Execute o script de teste:
-   ```bash
-   npm start
-   ```
-   Isto executará `src/index.js` no Node.js e exibirá todos os `console.log` de teste.
+**Requisitos**:  
+- Node.js instalado na sua máquina.
 
-### 2. No Navegador
+**Passos**:
+1. Clone ou baixe o projeto para sua máquina local.
+2. No terminal, navegue até a pasta do projeto.
+3. Execute o comando a seguir para instalar as dependências (se necessário):
+    ```bash
+    npm install
+    ```
+4. Para executar o projeto, rode:
+    ```bash
+    npm start
+    ```
+    Isso irá executar o arquivo `src/index.js`, que importa e testa todas as funções.
 
-1. Abra `index.html` em um servidor local (para suportar módulos ES6):
-   - Usando [Live Server no VSCode](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
-   - Ou com `http-server`:
-     ```bash
-     npm install -g http-server
-     http-server .
-     ```
-2. Acesse `http://localhost:8080` (ou porta indicada).
-3. No navegador, abra o Console de Desenvolvedor (`F12`) para ver os testes.
-4. Clique nos botões “Iniciar Jogo de Adivinhação” e “Exibir Mensagem” para testar interatividade.
+### 2. Via Navegador
+
+**Passos**:
+1. Abra o arquivo `index.html` no seu navegador (recomenda-se um navegador moderno como Chrome ou Firefox).
+2. Pressione `F12` para abrir as ferramentas de desenvolvedor e vá até o console.
+3. Veja os resultados dos testes diretamente no console!
 
 ---
 
 ## Exemplos de Uso
 
-No Node.js ou via Console do Navegador:
+Aqui estão alguns exemplos de como as funções podem ser usadas:
 
-```js
-import { soma, media, imc } from './src/mathFunctions.js';
-console.log(soma(2, 3));         // 5
-console.log(media(5, 7, 10));   // 7.333...
-console.log(imc(70, 1.75));     // ~22.86
+### Funções Matemáticas
 
+```javascript
+import { soma } from './src/mathFunctions.js';
+console.log(soma(2, 3)); // Resultado: 5
+
+import { media } from './src/mathFunctions.js';
+console.log(media(10, 20, 30)); // Resultado: 20
+```
+
+### Manipulação de Strings
+
+```javascript
 import { inverterString } from './src/stringFunctions.js';
-console.log(inverterString("Olá Mundo")); // "odnuM álO"
+console.log(inverterString("hello")); // Resultado: "olleh"
 
+import { palavrasLongas } from './src/stringFunctions.js';
+console.log(palavrasLongas("Este é um exemplo de uma frase bem longa", 5)); // Resultado: ["exemplo", "frase", "longa"]
+```
+
+### Manipulação de Arrays
+
+```javascript
 import { pessoaMaisVelha } from './src/arrayFunctions.js';
-console.log(
-  pessoaMaisVelha([
-    { nome: 'Ana', idade: 30 },
-    { nome: 'Beto', idade: 40 }
-  ])  // 'Beto'
-);
+console.log(pessoaMaisVelha([{nome: 'Ana', idade: 30}, {nome: 'Carlos', idade: 45}])); // Resultado: "Carlos"
+```
 
+### Interatividade com o Usuário
+
+```javascript
 import { advinheNumero } from './src/interactionFunctions.js';
-advinheNumero(); // Inicia o jogo no prompt/alert
+advinheNumero(); // Inicia o jogo de adivinhar o número no console.
 ```
 
 ---
 
 ## Autor
+
 Este projeto foi desenvolvido por **José Everson da Silva Santos** com base nas atividades da Universidade de Pernambuco - Professor **Augusto César Oliveira**.
