@@ -2,12 +2,43 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto JavaScript Modular</title>
 </head>
 <body>
-    <h1>Exercícios JavaScript Modular</h1>
-    <p>Abra o console para ver os testes!</p>
+    <h1>Exercícios de JavaScript Modular</h1>
+    <p>Abra o console do navegador para ver os resultados!</p>
 
-    <script type="module" src="./src/index.js"></script>
+    <button id="iniciarJogoBtn">Iniciar Jogo de Adivinhação</button>
+    <button id="exibirMensagemBtn">Exibir Mensagem</button>
+
+    <script type="module">
+        import * as MathFunctions from './src/mathFunctions.js';
+        import * as ArrayFunctions from './src/arrayFunctions.js';
+        import * as StringFunctions from './src/stringFunctions.js';
+        import * as InteractionFunctions from './src/interactionFunctions.js';
+
+        // Exemplo de uso das funções
+        console.log("Soma de 3 + 5:", MathFunctions.soma(3, 5));
+        console.log("Média de 7, 8, 9:", MathFunctions.media(7, 8, 9));
+        console.log("String invertida:", StringFunctions.inverterString("Javascript"));
+        console.log("Nome da pessoa mais velha:", ArrayFunctions.pessoaMaisVelha([{nome:'Ana',idade:30},{nome:'Beto',idade:40}]));
+        
+        // Função que inicializa o jogo de adivinhar o número
+        function iniciarJogo() {
+            InteractionFunctions.advinheNumero();
+        }
+
+        // Função para exibir mensagem de saudação
+        function exibirMensagem() {
+            InteractionFunctions.pedirNome();
+        }
+
+        // Espera o carregamento do DOM para adicionar os eventos
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('iniciarJogoBtn').addEventListener('click', iniciarJogo);
+            document.getElementById('exibirMensagemBtn').addEventListener('click', exibirMensagem);
+        });
+    </script>
 </body>
 </html>
