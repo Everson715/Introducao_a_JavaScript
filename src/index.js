@@ -61,7 +61,7 @@ import {
     console.log("Idade para ano de nascimento 1990:", calcularIdade(1990));
     console.log("Contagem de dígitos pares e ímpares em 123456:", contarDigitosParesImpares(123456));
   
-    const alunos = [{ nome: 'Ana', nota: 8 }, { nome: 'Carlos', nota: 7 }];
+    const alunos = [{ nome: 'Ana', nota: 8 }, { nome: 'Michael', nota: 7 }];
     console.log("Média das notas dos alunos:", calcularMediaAlunos(alunos));
   
     const produto = { nome: 'Celular', preco: 1500 };
