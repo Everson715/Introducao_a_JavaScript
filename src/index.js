@@ -20,7 +20,7 @@ import {
   import {
     encontrarPalavraMaisLonga, filtrarStringsGrandes, inverterString
   } from './stringFunctions.js';
-  
+
   // Handler para o botão "Iniciar Jogo"
   function iniciarJogo() {
     advinheNumero();

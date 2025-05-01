@@ -18,3 +18,7 @@ export function calcularPrecoProduto(custo, margemLucro, frete) {
 export function verificarPropriedade(objeto, propriedade) {
     return objeto.hasOwnProperty(propriedade);
 }
+export function calcularMediaAlunos(alunos) {
+    const total = alunos.reduce((acc, aluno) => acc + aluno.nota, 0);
+    return total / alunos.length;
+  }
